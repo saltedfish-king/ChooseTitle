@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>管理员</title>
+  <style>
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-image: url("img/11.jpg");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-attachment: fixed;
+}
+
+#x {
+	position: absolute;
+	left: 150px;
+	top: 160px;
+	width: 180px;
+	background-color: rgba(250, 250, 250, 0.3);
+	border: #E1E4EA 5px solid;
+	border-radius: 10px;
+	padding-left: 20px;
+	/*background-image: url("../img/9.jpg");
+background-repeat: no-repeat;
+background-size: 100% 100%;
+background-attachment: fixed;*/
+}
+
+#p1 {
+	float: left;
+	position: absolute;
+	left: 150px;
+	top: 200px;
+	list-style-type: none;
+	width: 200px;
+	background-color: rgba(250, 250, 250, 0.3);
+	border: #E1E4EA 5px solid;
+	border-radius: 10px;
+}
+
+#ppp11 {
+	display: none;
+	float: left;
+	position: absolute;
+	top: 0px;
+	left: 250px;
+	width: 1000px;
+	overflow: hidden;
+	background-color: rgba(255, 255, 255, 0.3);
+	border: #a5a5a5 3px solid;
+	border-radius: 10px;
+}
+
+#ppp12 {
+	display: none;
+	float: left;
+	position: absolute;
+	top: 0px;
+	left: 250px;
+	width: 1000px;
+	overflow: hidden;
+	background-color: rgba(255, 255, 255, 0.3);
+	text-align: center;
+	border: #a5a5a5 3px solid;
+	border-radius: 10px;
+}
+
+#ppp13 {
+	display: none;
+	float: left;
+	position: absolute;
+	top: 0px;
+	left: 250px;
+	width: 1000px;
+	overflow: hidden;
+	background-color: rgba(255, 255, 255, 0.3);
+	text-align: center;
+	border: #a5a5a5 3px solid;
+	border-radius: 10px;
+}
+
+#ppp21 {
+	display: none;
+	float: left;
+	position: absolute;
+	top: 0px;
+	left: 250px;
+	width: 1000px;
+	overflow: hidden;
+	background-color: rgba(255, 255, 255, 0.3);
+	text-align: center;
+	border: #a5a5a5 3px solid;
+	border-radius: 10px;
+}
+
+#ppp22 {
+	display: none;
+	float: left;
+	position: absolute;
+	top: 0px;
+	left: 250px;
+	width: 1000px;
+	overflow: hidden;
+	background-color: rgba(255, 255, 255, 0.3);
+	text-align: center;
+	border: #a5a5a5 3px solid;
+	border-radius: 10px;
+}
+
+#ppp23 {
+	display: none;
+	float: left;
+	position: absolute;
+	top: 0px;
+	left: 250px;
+	width: 1000px;
+	overflow: hidden;
+	background-color: rgba(255, 255, 255, 0.3);
+	border: #a5a5a5 3px solid;
+	border-radius: 10px;
+}
+
+#ppp31 {
+	display: none;
+	float: left;
+	position: absolute;
+	top: 0px;
+	left: 250px;
+	width: 1000px;
+	overflow: hidden;
+	background-color: rgba(255, 255, 255, 0.3);
+	border: #a5a5a5 3px solid;
+	border-radius: 10px;
+}
+
+#ppp32 {
+	display: none;
+	float: left;
+	position: absolute;
+	top: 0px;
+	left: 250px;
+	width: 1000px;
+	overflow: hidden;
+	background-color: rgba(255, 255, 255, 0.3);
+	border: #a5a5a5 3px solid;
+	border-radius: 10px;
+	text-align: center;
+}
+
+#ppp33 {
+	display: none;
+	float: left;
+	position: absolute;
+	top: 0px;
+	left: 250px;
+	width: 1000px;
+	overflow: hidden;
+	background-color: rgba(255, 255, 255, 0.3);
+	text-align: center;
+	border: #a5a5a5 3px solid;
+	border-radius: 10px;
+}
+
+#ppp34 {
+	display: none;
+	float: left;
+	position: absolute;
+	top: 0px;
+	left: 250px;
+	width: 1000px;
+	overflow: hidden;
+	background-color: rgba(255, 255, 255, 0.3);
+	text-align: center;
+	border: #a5a5a5 3px solid;
+	border-radius: 10px;
+}
+
+#ppp31 table {
+	text-align: center;
+}
+
+#ppp23 span {
+	margin: 4px 40px;
+}
+
+#ppp231 {
+	width: 80px;
+	margin-top: 10px;
+	margin-left: 20px;
+}
+
+#ppp232 {
+	width: 80px;
+	margin-top: 10px;
+	margin-left: 20px;
+	margin-bottom: 10px;
+}
+
+#ppp31 span {
+	margin: 4px 40px;
+}
+
+#ppp312 {
+	width: 80px;
+	margin-left: 20px;
+}
+
+#stuadd {
+	width: 80px;
+	margin-left: 105px;
+}
+
+#teaadd {
+	width: 80px;
+	margin-left: 105px;
+}
+
+a {
+	text-decoration: none;
+}
+
+.dd {
+	line-height: 40px;
+	text-align: center;
+}
+
+#p11, #p21, #p31 {
+	line-height: 40px;
+}
+
+#d1:hover, #d2:hover, #d3:hover, #d4:hover, #d5:hover, #d6:hover, #d7:hover,
+	#d8:hover, #d9:hover, #d10:hover {
+	background-color: #E1E4EA;
+}
+
+.top {
+	/* 设置宽度高度背景颜色 */
+	position: absolute;
+	top: 100px;
+	height: 50px;
+	width: 100%;
+	font-family: 微软雅黑;
+	line-height: 50px;
+	color: #ffffff;
+}
+
+.top span {
+	margin-left: 150px;
+	font-size: 30px;
+}
+
+#top1 {
+	margin-left: 25px;
+	font-size: 16px;
+}
+
+#return {
+	float: left;
+	position: absolute;
+	left: 150px;
+	top: 35px;
+	width: 80px;
+	height: 80px;
+}
+
+#y {
+	float: left;
+	position: absolute;
+	left: 1200px;
+	top: 50px;
+	width: 200px;
+	height: 150px;
+}
+
+#y2 {
+	float: left;
+	position: absolute;
+	left: 600px;
+	top: 30px;
+	width: 130px;
+	height: 70px;
+}
+
+
+</style>
+</head>
+<body>
+<div id="return">
+  <a href="首页.html"><img src="img/s35.png" height="80" width="80"></a>
+</div>
+<div class="top">
+  <span>毕业设计选题系统</span><span id="top1">Graduation project topic selection system</span>
+</div>
+<div id="y">
+  <img src="img/s100.png" width="193px" height="104px"/>
+</div>
+<div id="y2">
+  <img src="img/云2.png" width="130px" height="70px"/>
+</div>
+<div>
+  <ul>
+    <li id="xx">
+      <div id="x">
+        <form>
+          <table>
+            <tr>
+              <td>欢迎您-管理员</td>    <!--账号名称-->
+              <td id="showid"></td>
+            </tr>
+          </table>
+        </form>
+      </div>
+    </li>
+    <li id="p1">
+      <div id="p11"><span style="padding-left:40px;background: url(img/s26.png) no-repeat; display:block"><h3>用户管理</h3></span></div>
+      <div class="dd" id="d1"><a href="" id="p12">用户信息增加</a></div>
+      <div class="dd" id="d2"><a href="" id="p13">操作学生信息</a></div>
+      <div class="dd" id="d3"><a href="" id="p14">操作教师信息</a></div>
+      <div class="r" id="ppp11">   <!--用户信息增加-->
+        <h1>学生用户增加</h1>
+        <form>
+          <table border="1px" width="100%">
+            <tr><td width="100px" align="right">学 号</td><td><input type="text" class="int" id="stuid"/></td></tr>
+            <tr><td width="100px" align="right">密 码</td><td><input type="text" class="int" id="stupdw"/></td></tr>
+            <tr><td width="100px" align="right">姓 名</td><td><input type="text" class="int" id="stuname"/></td></tr>
+            <tr><td width="100px" align="right">性 别</td><td><input type="text" class="int" id="stusex"/></td></tr>
+            <tr><td width="100px" align="right">专 业</td><td><input type="text" class="int" id="stuzy"/></td></tr>
+            <tr><td width="100px" align="right">年 级</td><td><input type="text" class="int" id="stunj"/></td></tr>
+            <tr><td width="100px" align="right">邮 件</td><td><input type="text" class="int" id="stuem"/></td></tr>
+            <tr><td width="100px" align="right">联系电话</td><td><input type="text" class="int" id="stup"/></td></tr>
+            <tr><td width="100px" align="right">绩 点</td><td><input type="text" class="int" id="stujd"/></td></tr>
+            
+          </table>
+          <input type="button" id="stuadd" value="添加"/>
+        </form>
+        <h1>教师用户增加</h1>
+        <form>
+          <table border="1px" width="100%">
+            <tr><td width="100px" align="right">工号</td><td><input type="text" class="tint" id="teaid"/></td></tr>
+            <tr><td width="100px" align="right">密码</td><td><input type="text" class="tint" id="teapwd"/></td></tr>
+            <tr><td width="100px" align="right">姓名</td><td><input type="text" class="tint" id="teaname"/></td></tr>
+            <tr><td width="100px" align="right">职称</td><td><input type="text" class="tint" id="teazc"/></td></tr>
+            <tr><td width="100px" align="right">简介</td><td><input type="text" class="tint" id="teajj"/></td></tr>
+          </table>
+          <input type="button" id="teaadd" value="添加"/>
+        </form>
+      </div>
+      <div class="r" id="ppp12">    <!--用户信息管理,删除学生用户并重置密码-->
+        <h1>删除学生或重置学生密码</h1>
+        <from>
+          <table border="1px" width="100%" id="table1">
+            <tr><td class="stuid">学号</td><td>密码</td><td>姓名</td><td>性别</td><td>专业</td><td>年级</td><td>删除</td><td>重置</td></tr>
+          </table>
+        </from>
+      </div>
+      <div  class="r" id="ppp13">    <!--用户信息管理,删除教师用户并重置密码-->
+        <h1>删除教师或重置教师密码</h1>
+        <from>
+          <table border="1px" width="100%" id="table2">
+            <tr><td>工号</td><td>姓名</td><td>职称</td><td>简介</td><td>删除</td><td>重置</td></tr>
+          </table>
+        </from>
+      </div>
+      <div id="p21"><span style="padding-left:40px;background: url(img/s15.png) no-repeat; display:block">
+      <h3>选题管理</h3></span></div>
+      <div class="dd" id="d4"><a href="" id="p22">毕业生基本信息管理</a></div>
+      <div class="dd" id="d5"><a href="" id="p23">题目发布</a></div>
+      <div class="dd" id="d6"><a href="" id="p24">设置选题时间</a></div>
+      <div class="r" id="ppp21">   <!--毕业生基本信息管理，每个年级每个专业有多少人数 -->
+        <h1>查看各年级专业的人数</h1>
+        <form>
+          <table border="1px" width="100%" id="table5">
+            <tr><td>年级</td><td>专业</td><td>人数</td></tr>
+          </table>
+        </form>
+      </div>
+      <div class="r" id="ppp22">     <!--题目发布-->
+        <h1>题目发布</h1>
+        <form>
+          <table border="1px" width="100%" id="table6">
+            <tr><td>姓名</td><td>工号</td><td>课题名</td><td><input type="button" id="send" value="发布题目信息"></td></tr>
+          </table>
+        </form>
+      </div>
+      <div class="r" id="ppp23">     <!--设置发布时间-->
+        <h1>设置开始选题时间</h1>
+        <span>请输入开始时间</span><input type="text" id="stime" placeholder="时间格式:XX-XX-XX"/><br>
+        <span>请输入结束时间</span><input type="text" id="etime"/><input type="button" id="ppp232" value="设置"/>
+      </div>
+      <div id="p31"><span style="padding-left:40px;background: url(img/s27.png) no-repeat; display:block"><h3>选题信息统计</h3></span></div>
+      <div class="dd" id="d7"><a href="" id="p32">题目查询</a></div>
+      <div class="dd" id="d8"><a href="" id="p33">选题进度</a></div>
+      <div class="dd" id="d9"><a href="" id="p34">题目总表</a></div>
+      <div class="dd" id="d10"><a href="" id="p35">选题分类</a></div>
+      <div class="r" id="ppp31">    <!--课题查询 -->
+        <span>请输入课题号</span><input type="text" id="ppp311"/><input type="button" id="ppp312" value="查询"/>
+        <form>
+          <table border="1px" width="100%" id="table3">
+            <tr><td>题目编号</td><td>题目名字</td><td>教师工号</td><td>类别</td><td>简介</td><td>开发工具</td></tr>
+          </table>
+        </form>
+      </div>
+      <div class="r" id="ppp32">      <!--选题进度-->
+        <form>
+          <table border="1px" width="100%">
+            <tr>
+              <td>
+                <table border="1px" width="100%" id="end">
+                  <span style="text-align: center">已完成选课学生</span>
+                  <tr><td>学号</td><td>姓名</td></tr>
+                </table>
+              </td> </tr>    <!--已完成选课学生名单 -->
+              <tr>
+              <td>
+                <table border="1px" width="100%" id="unend">
+                  <span style="text-align: center">未完成选课学生</span>
+                  <tr><td>学号</td><td>姓名</td></tr>
+                </table>
+              </td>
+            </tr>      <!--未完成选课学生名单 -->
+          </table>
+        </form>
+      </div>
+      <div class="r" id="ppp33">      <!--选题总表-->
+        <form>
+          <table border="1px" width="100%" id="table4">
+            <tr><td>题目编号</td><td>题目名字</td><td>教师工号</td><td>类别</td><td>简介</td><td>开发工具</td></tr>
+          </table>
+        </form>
+      </div>
+         <div class="r" id="ppp34">      <!-- 选题分类-->
+        <form>
+          <h1>题目类别数量</h1>
+          <table border="1px" width="100%" id="kind1">
+            <tr><td>类别</td><td>数量</td></tr>
+          </table>
+          <h1>老师指导学生人数</h1>
+          <table border="1px" width="100%" id="kind2">
+            <tr><td>教师工号</td><td>教师姓名</td><td>数量</td></tr>
+          </table>
+        </form>
+      </div>
+    </li>
+  </ul>
+</div>
+<script src="jquery-3.1.1.min.js"></script>
+<script>
+$(function () {
+	  //获取跳转带来的id
+	  var showid = decodeURI(location.search);
+	  var reg = /[^=]+/g;
+	  var sid = showid.match(reg);
+	  sid = sid[1];
+	  $("#showid").html(sid);
+	  
+	  //定义时间的全局变量
+	  var startTime;
+	  var endTime;
+	  
+	  $("#p12").click(function () {   //用户信息增加
+	    $(".r").css("display","none");
+	    $("#ppp11").css("display","block");
+	    
+	    //学生添加按钮事件
+	    $("#stuadd").click(function () {
+	    	var sid = $("#stuid").val();
+		    var spwd = $("#stupdw").val();
+		    var sname = $("#stuname").val();
+		    var ssex = $("#stusex").val();
+		    var smajor = $("#stuzy").val();
+		    var syear = $("#stunj").val();
+		    var semail = $("#stuem").val();
+		    var stell = $("#stup").val();
+		    var sgrade = $("#stujd").val();
+		    
+		    $.get(
+		    	"StuAdd",
+		    	{"sid":sid,"spwd":spwd,"sname":sname,"ssex":ssex,"smajor":smajor,"syear":syear,"semail":semail,"stell":stell,"sgrade":sgrade},
+		    	function (response,status) {
+					alert("添加成功");
+					$(".int").val("");
+				}
+		    );
+		    
+		});
+	    
+	    //教师添加按钮事件
+	    $("#teaadd").click(function () {
+			var tname = $("#teaname").val();
+			var tid = $("#teaid").val();
+			var tpwd = $("#teapwd").val();
+			var tshow = $("#teajj").val();
+			var workname = $("#teazc").val();
+			
+			$.get(
+				"TeaAdd",
+				{"tname":tname,"tpwd":tpwd,"tid":tid,"workname":workname,"tshow":tshow},
+				function (response,status) {
+					alert("添加成功");
+					$(".tint").val("");
+				}
+			);
+		});
+	    
+	    return false;
+	  })
+	  $("#p13").click(function () {  //操作学生信息重置密码
+	    $(".r").css("display","none");
+	    $("#ppp12").css("display","block");
+	    
+	    //显示学生信息
+	    $.get(
+	    	"StuQuery",
+	    	{"sid":sid},
+	    	function (response,status) {
+				$("#table1 tr:gt(0)").remove();
+				for (var i = 0; i < response.sid.length; i++) {
+					var $tr = $("<tr></tr>");
+					var $td = $("<td class='stid'>"+response.sid[i]+"</td><td class='sPwd'>"+response.spwd[i]+"</td><td>"+response.sname[i]+"</td><td>"+response.ssex[i]+"</td><td>"+response.smajor[i]+"</td><td>"+response.syear[i]+"</td><td><input type='button' class='delete' value='删除'/></td><td><input type='button' value='重置' class='reset'/></td>");
+					$tr.append($td);
+					
+					$("#table1").append($tr);
+				}
+			}
+	    );
+	    
+	    //给两个按钮添加点击事件
+	    $("#table1").one("click",'.delete',function(){//删除按钮
+	    	var stuid = $(this).parent().parent().find(".stid");
+	    	$.get(
+	    		"StuDelete",
+	    		{"stuid":stuid.text()},
+	    		function(response,status){
+	    			stuid.parent().remove();
+	    		}
+	    	);
+	    });
+	    
+	    $("#table1").one("click",'.reset',function(){//重置按钮
+	    	var stuid = $(this).parent().parent().find(".stid");
+	    	var spwd = "000000";
+	    	var a = $(this).parent().parent();
+	    	$.get(
+	    		"StuUpdate",
+	    		{"stuid":stuid.text(),"spwd":spwd},
+	    		function (response,status) {
+					alert("重置成功");
+					a.find(".sPwd").html(response.spwd);
+					
+				}
+	    	);
+	    })
+	    return false;
+	  })
+	  $("#p14").click(function () {  //操作老师信息重置密码
+	    $(".r").css("display","none");
+	    $("#ppp13").css("display","block");
+	    
+	    //显示老师信息
+	    $.get(
+	    	"TeaQueryAll",
+	    	{"tid":sid},
+	    	function (response,status) {
+	    		$("#table2 tr:gt(0)").remove();
+	    		for (var i = 0; i < response.tid.length; i++) {
+					var $tr = $("<tr></tr>");
+					var $td = $("<td class='tid'>"+response.tid[i]+"</td><td>"+response.tname[i]+"</td><td>"+response.workname[i]+"</td><td>"+response.tshow[i]+"</td><td><input type='button' class='delete' value='删除'/></td><td><input type='button' value='重置' class='reset'/></td>");
+					
+					$tr.append($td);
+					$("#table2").append($tr);
+				}
+			}
+	    );
+	    
+	    //添加点击事件
+	    //给两个按钮添加点击事件
+	    $("#table2").one("click",'.delete',function(){//删除按钮
+	    	var tid = $(this).parent().parent().find(".tid");
+	    	$.get(
+	    		"TeaDelete",
+	    		{"tid":tid.text()},
+	    		function(response,status){
+	    			tid.parent().remove();
+	    		}
+	    	);
+	    });
+	    
+	    $("#table2").one("click",'.reset',function(){//重置按钮
+	    	var tid = $(this).parent().parent().find(".tid");
+	    	var tpwd = "000000";
+	    	$.get(
+	    		"TeaReset",
+	    		{"tid":tid.text(),"tpwd":tpwd},
+	    		function (response,status) {
+					alert("重置成功");
+				}
+	    	);
+	    })
+	    return false;
+	  })
+	  $("#p22").click(function () {   //毕业生基本信息查询
+	    $(".r").css("display","none");
+	    $("#ppp21").css("display","block");
+	    
+	    $.get(
+	    	"StuCount",
+	    	{},
+	    	function (response,status) {
+				$("#table5 tr:gt(0)").remove();
+	    		for (var i = 0; i < response.stell.length; i++) {
+	    			$tr = $("<tr></tr>");
+					$td = $("<td>"+response.syear[i]+"</td> <td>"+response.smajor[i]+"</td><td>"+response.stell[i]+"</td>");
+					$tr.append($td);
+					$("#table5").append($tr);
+				}
+			}
+	    );
+	    return false;
+	  })
+	  $("#p23").click(function () {   //题目发布
+	    $(".r").css("display","none");
+	    $("#ppp22").css("display","block");
+	    
+	    $.get(
+				"ITquery",
+				{},
+				function (response,status) {
+					$("#table6 tr:gt(0)").remove();
+					for (var i = 0; i < response.tid.length; i++) {
+						$tr = $("<tr></tr>");
+						$td = $("<td>"+response.tid[i]+"</td><td>"+response.itool[i]+"</td><td align='left'>"+response.iname[i]+"</td>");
+						$tr.append($td);
+						$("#table6").append($tr);
+					}
+				}
+			);
+	    
+	    //按钮事件
+	    $("#send").click(function () {
+			$.get(
+				"AdminSend",
+				{},
+				function(response,status){
+					alert("发布成功");
+				}
+			);
+		});
+	    return false;
+	  })
+	  $("#p24").click(function () {   //设置选题时间
+	    $(".r").css("display","none");
+	    $("#ppp23").css("display","block");
+	    
+	    //获取系统时间
+	    var sysDate = new Date();
+	    
+	    $("#ppp232").click(function(){
+	    	//获取用户输入的时间
+		    var start = $("#stime").val();
+		    var end = $("#etime").val();
+		    startTime = new Date(start);
+		    endTime = new Date(end);
+	    	
+		    $.get(
+		    	"UpdateTime",
+		    	{"startTime":start,"endTime":end,"aid":sid},
+		    	function (response,status){
+		    		alert("发布成功");
+		    	}
+		    );
+		    
+	    });
+	    
+	    return false;
+	  })
+	  $("#p32").click(function () {   //题目查询
+	    $(".r").css("display","none");
+	    $("#ppp31").css("display","block");
+	    
+	    $("#ppp312").click(function () {//查询点击事件
+		var iid = $("#ppp311").val();
+	    $.get(
+	    	"IQByid",
+	    	{"iid":iid},
+	    	function(response,status){
+	    		$("#table3 tr:gt(0)").remove();
+	    		$tr = $("<tr></tr>");
+	    		$td = $("<td>"+response.iid+"</td><td>"+response.iname+"</td><td>"+response.tid+"</td><td>"+response.ikind+"</td><td>"+response.ishow+"</td><td>"+response.itool+"</td>")
+	    		$tr.append($td);
+	    		$("#table3").append($tr);
+	    	}
+	    );
+	    
+	    
+		});
+	    return false;
+	  })
+	  $("#p33").click(function () {   //选题进度
+	    $(".r").css("display","none");
+	    $("#ppp32").css("display","block");
+	    //完成选课的学生
+	    $.get(
+	        	"StuQuery",
+	        	{"sid":sid},
+	        	function(response,status){
+	        		$("#end tr:gt(0)").remove();
+	        		var n = 0;
+	        		for (var i = 0; i < response.sid.length; i++) {
+	    				if(response.iid[i] != null){
+	    					
+	    					var $tr = $("<tr></tr>");
+	    					var $td = $("<td align='center'>"+response.sid[i]+"</td><td align='center'>"+response.sname[i]+"</td>");
+	    					$tr.append($td);
+	    					$("#end").append($tr);
+	    					n++;
+	    				}
+	    			}
+	        		var $tdd = $("<tr><td colspan='2'>人数:"+n+"</td></tr>");
+	        		$("#end").append($tdd);
+	        	}
+	        );
+	    
+	    
+	    //未完成
+	    $.get(
+	        	"StuQuery",
+	        	{"sid":sid},
+	        	function(response,status){
+	        		$("#unend tr:gt(0)").remove();
+	        		var m = 0;
+	        		for (var i = 0; i < response.sid.length; i++) {
+	    				if(response.iid[i] == null){
+	    					
+	    					var $tr = $("<tr></tr>");
+	    					var $td = $("<td align='center'>"+response.sid[i]+"</td><td align='center'>"+response.sname[i]+"</td>");
+	    					$tr.append($td);
+	    					$("#unend").append($tr);
+	    					m++;
+	    				}
+	    			}
+	        		var $tdd = $("<tr><td colspan='2'>人数:"+m+"</td></tr>");
+	        		$("#unend").append($tdd);
+	        	}
+	        );
+	    return false;
+	  })
+	  $("#p34").click(function () {   //选题总表
+	    $(".r").css("display","none");
+	    $("#ppp33").css("display","block");
+	    
+	    $.get(
+				"ItemQueryAll",
+				{"tid":sid},
+				function (response,status) {
+					$("#table4 tr:gt(0)").remove();
+					for (var i = 0; i < response.tid.length; i++) {
+						var $tr = $("<tr></tr>");
+							var $td = $("<td>"+response.iid[i]+"</td><td>"+response.iname[i]+"</td><td>"+response.tid[i]+"</td><td>"+response.ikind[i]+"</td><td>"+response.ishow[i]+"</td><td>"+response.itool[i]+"</td>");
+							$tr.append($td);
+					
+						$("#table4").append($tr);
+					}
+				}
+			);
+	    return false;
+	  })
+	  $("#p35").click(function () {   //选题总表
+		    $(".r").css("display","none");
+		    $("#ppp34").css("display","block");
+		    
+		    $.get(
+		    	"KQuery",
+		    	{},
+		    	function (response,status){
+		    		$("#kind1 tr:gt(0)").remove();
+					for (var i = 0; i < response.ikind.length; i++) {
+						var $tr = $("<tr></tr>");
+						
+							var $td = $("<td align='center'>"+response.ikind[i]+"</td><td align='center'>"+response.iid[i]+"</td>");
+							$tr.append($td);
+					
+						$("#kind1").append($tr);
+					}
+		    	}
+		    );
+		    $.get(
+			    	"TQuery",
+			    	{},
+			    	function (response,status){
+			    		$("#kind2 tr:gt(0)").remove();
+						for (var i = 0; i < response.iid.length; i++) {
+							var $tr = $("<tr></tr>");
+							
+								var $td = $("<td align='center'>"+response.tid[i]+"</td><td align='center'>"+response.iname[i]+"</td><td align='center'>"+response.iid[i]+"</td>");
+								$tr.append($td);
+						
+							$("#kind2").append($tr);
+						}
+			    	}
+			    );
+		    
+		    return false;
+		  })
+
+});
+</script>
+</body>
+</html>
